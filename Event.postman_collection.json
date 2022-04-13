@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "eade8d1b-7c20-4156-9eb4-e357f46bc26a",
+		"name": "Event",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET - ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/events/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"events",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POTS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"type\": \"house\",\n\"timestamp\": 12\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/events/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"events",
+						""
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "fod-type'",
+							"disabled": true
+						},
+						{
+							"key": "startTime",
+							"value": "15",
+							"disabled": true
+						},
+						{
+							"key": "endTime",
+							"value": "16",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/events/?type=house",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"events",
+						""
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "house"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - TYPE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/events?type=fod-type&startTime=10&endTime=16",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"events"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "fod-type"
+						},
+						{
+							"key": "startTime",
+							"value": "10"
+						},
+						{
+							"key": "endTime",
+							"value": "16"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
